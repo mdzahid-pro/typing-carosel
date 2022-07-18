@@ -5,8 +5,11 @@ function render_name(name, len = 0){
         if(len == 0){
 			elem.innerHTML = "";
 		}
+		
+        if(name[len] != undefined){
+			elem.append(name[len]);
+		}
         
-        elem.append(name[len]);
         if(len <= length){
             render_name(name, len + 1)
         }else{
